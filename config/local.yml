@@ -3,27 +3,3 @@ storage_path: "storage/storage.db"
 http_server:
   host: "localhost"
   port: 3000
-  cors:
-    enabled: true
-    allowed_origins:
-      - "*"
-    allowed_methods:
-      - "GET"
-      - "POST"
-      - "PUT"
-      - "DELETE"
-      - "OPTIONS"
-    allowed_headers:
-      - "Content-Type"
-      - "Authorization"
-      - "X-Requested-With"
-      - "Accept"
-    exposed_headers:
-      - "Content-Length"
-    allow_credentials: true
-    max_age: 3600
-logging:
-  level: "debug"
-  file: "logs/app.log"
-  max_size: 10MB
-  max_backups: 5  
