@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/singhJasvinder101/basic-api/internal/config"
+	"github.com/singhJasvinder101/basic-api/internal/http/handlers/student"
 )
 
 func main() {
@@ -16,9 +17,7 @@ func main() {
 	// database setup
 	// setup router
 	router := http.NewServeMux()
-	router.HandleFunc("GET /", func(w http.ResponseWriter, req *http.Request) {
-		w.Write([]byte("running...."))
-	})
+	router.HandleFunc("POST /api/students", student.New())
 
 	// setups server
 
